@@ -6,6 +6,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using System.IO;
+using SqliteApp.Standard;
 
 namespace XamarinApp.Droid
 {
@@ -18,8 +20,13 @@ namespace XamarinApp.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
+
+
+            var dbPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal), "Project.db");
+            var recipeRepository = new RecipeRepository(dbPath);
+
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            LoadApplication(new App());
+            LoadApplication(new App(recipeRepository));
         }
     }
 }

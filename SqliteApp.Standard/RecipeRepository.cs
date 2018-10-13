@@ -4,20 +4,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using XamarinApp.Model;
 using XamarinApp;
 
-namespace SqliteApp.Standard
+namespace SqliteApp.Standard 
 {
-    class ReviewRepository : IReviewsReopsitory
+    public class RecipeRepository : IRecipeRepository
     {
         private readonly DatabaseContext _databaseContext;
 
-        public ReviewRepository(string dbPath)
+        public RecipeRepository(string dbPath)
         {
             _databaseContext = new DatabaseContext(dbPath);
         }
 
-        public async Task<Review> GetReviewByIdAsync(int id)
+        public async Task<Recipe> GetRecipeByIdAsync(int id)
         {
             try
             {
@@ -31,7 +32,7 @@ namespace SqliteApp.Standard
             }
         }
 
-        public async Task<bool> AddReviewAsync(Review review)
+        public async Task<bool> AddRecipeAsync(Recipe review)
         {
             try
             {
@@ -49,7 +50,7 @@ namespace SqliteApp.Standard
             }
         }
 
-        public async Task<bool> UpdateReviewAsync(Review review)
+        public async Task<bool> UpdateRecipeAsync(Recipe review)
         {
             try
             {
@@ -67,7 +68,7 @@ namespace SqliteApp.Standard
             }
         }
 
-        public async Task<bool> RemoveProductAsync(int id)
+        public async Task<bool> RemoveRecipeAsync(int id)
         {
             try
             {
@@ -87,7 +88,7 @@ namespace SqliteApp.Standard
             }
         }
 
-        public async Task<IEnumerable<Review>> QueryProductAsync(Func<Review, bool> predicate)
+        public async Task<IEnumerable<Recipe>> QueryRecipesAsync(Func<Recipe, bool> predicate)
         {
             try
             {
@@ -101,7 +102,7 @@ namespace SqliteApp.Standard
             }
         }
 
-        public async Task<IEnumerable<Review>> GetReviewsAsync()
+        public async Task<ICollection<Recipe>> GetRecipesAsync()
         {
             try
             {

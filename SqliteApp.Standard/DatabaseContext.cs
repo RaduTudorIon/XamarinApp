@@ -1,12 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System;
-using XamarinApp;
+using XamarinApp.Model;
 
 namespace SqliteApp.Standard
 {
    public class DatabaseContext: DbContext
     {
-        public DbSet<Review> Reviews { get; set; }
+        public DbSet<Recipe> Reviews { get; set; }
 
         private readonly string _databasePath;
 

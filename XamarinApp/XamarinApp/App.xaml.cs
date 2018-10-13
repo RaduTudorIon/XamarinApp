@@ -7,11 +7,11 @@ namespace XamarinApp
 {
     public partial class App : Application
     {
-        public App()
+        public App(IRecipeRepository recipeRepository)
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainPage(recipeRepository);
         }
 
         protected override void OnStart()

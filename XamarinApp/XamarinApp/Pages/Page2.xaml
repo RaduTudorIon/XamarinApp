@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinApp.Page2"
+             Title="Test Page2">
+    <ContentPage.Content>
+        <StackLayout
+            Spacing="10"
+            Padding="20">
+            <Button
+            Text="Add Recipe"
+            TextColor="White"
+            BackgroundColor="DodgerBlue"
+            FontSize="22"
+            Clicked="Handle_Add_RecipeAsync"
+            />
+            <Button
+            Text="Refresh"
+            TextColor="White"
+            BackgroundColor="Fuchsia"
+            FontSize="22"
+            Command="{Binding RefreshCommand}"
+            />
+            
+            <ListView ItemsSource="{Binding Recipes}"
+                      HasUnevenRows="True"
+                      BackgroundColor="#ecf0f1"
+                      SeparatorVisibility="None"
+                      HorizontalOptions="FillAndExpand"
+                      VerticalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout
+                                Margin="6,4,6,4">
+                                <Label Text="{Binding RecipeTitle}" 
+                                       Margin="8"
+                                       FontAttributes="Bold"
+                                       FontSize="Medium"></Label>
+                                <Label Text="{Binding RecipeCookingTime}"
+                                       Margin="8,2,8,4"
+                                       FontAttributes="Bold"
+                                       FontSize="Small"></Label>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

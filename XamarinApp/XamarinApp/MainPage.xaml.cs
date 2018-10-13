@@ -9,10 +9,11 @@ namespace XamarinApp
 {
     public partial class MainPage : MasterDetailPage
     {
-        public MainPage()
+        IRecipeRepository recipeRepository;
+        public MainPage(IRecipeRepository recipeRepository)
         {
             InitializeComponent();
-
+            this.recipeRepository = recipeRepository;
             Detail = new NavigationPage(new Page1());
 
             IsPresented = false;
@@ -27,7 +28,7 @@ namespace XamarinApp
 
         void Handle_Clicked2(object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new Page2());
+            Detail = new NavigationPage(new Page2(recipeRepository));
             IsPresented = false;
         }
 

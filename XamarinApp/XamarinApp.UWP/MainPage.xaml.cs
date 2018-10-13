@@ -21,7 +21,7 @@ namespace XamarinApp.UWP
         {
             this.InitializeComponent();
 
-            LoadApplication(new XamarinApp.App());
+            LoadApplication(new XamarinApp.App(null));
         }
     }
 }
