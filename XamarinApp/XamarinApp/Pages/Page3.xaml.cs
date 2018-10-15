@@ -21,11 +21,6 @@ namespace XamarinApp
             GetRestaurants();
         }
 
-        public static Command MyButton_Click = new Command((object item) => {
-            var myItem = item as Restaurants;
-            // Do something with myItem...
-        });
-
         private async void GetRestaurants()
         {
             try
