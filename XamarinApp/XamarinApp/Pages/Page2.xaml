@@ -4,7 +4,8 @@
              x:Class="XamarinApp.Page2"
              Title="Test Page2">
     <ContentPage.Content>
-        <StackLayout
+        <ScrollView>
+            <StackLayout
             Spacing="10"
             Padding="20">
             <Button
@@ -47,5 +48,6 @@
                 </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

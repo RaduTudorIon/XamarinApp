@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.AddRecipe">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
             <Button
             Text="Add Recipe"
@@ -10,18 +11,18 @@
             BackgroundColor="Fuchsia"
             FontSize="22"
             Command="{Binding AddCommand}"/>
-           
-            <Grid 
-            VerticalOptions="Center" 
-            HorizontalOptions ="Center"
-            Margin="50">
-                <Grid.RowDefinitions>
+
+                <Grid 
+            VerticalOptions="FillAndExpand" >
+                    <!--HorizontalOptions ="Center"
+                    Margin="50"> -->
+                    <Grid.RowDefinitions>
                     <RowDefinition Height="auto" />
                     <RowDefinition Height="auto" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*" />
-                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="auto" />
                 </Grid.ColumnDefinitions>
                 
                 <Label Text="Id" Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" />
@@ -50,5 +51,6 @@
             FontSize="22"
             Clicked="Handle_BackAsync"/>
         </StackLayout>
+         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
