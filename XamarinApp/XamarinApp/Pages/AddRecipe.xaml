@@ -38,8 +38,17 @@
                 <Entry WidthRequest="200" Placeholder="Recipe Calories" Grid.Row="3" Grid.Column="1" Text="{Binding RecipeCalories}"/>
                 
                 <Label Text="Recipe Coocking Time" Grid.Row="4" Grid.Column="0" VerticalTextAlignment = "Center"/>
-                <Entry WidthRequest="200" Placeholder="Recipe Coocking Time" Grid.Row="4" Grid.Column="1" Text="{Binding RecipeCookingTime}"/>
-                
+                <!--<Entry WidthRequest="200" Placeholder="Recipe Coocking Time" Grid.Row="4" Grid.Column="1" Text="{Binding RecipeCookingTime}"/> -->
+                    <Picker WidthRequest="200"  Grid.Row="4" Grid.Column="1" SelectedItem="{Binding RecipeCookingTime}">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>5</x:String>
+                                <x:String>10</x:String>
+                                <x:String>15</x:String>
+                                <x:String>20</x:String>
+                            </x:Array>
+                        </Picker.ItemsSource>
+                </Picker>
                 <Label Text="Recipe Ingredients" Grid.Row="5" Grid.Column="0" VerticalTextAlignment = "Center"/>
                 <Entry WidthRequest="200" Placeholder="Recipe Ingredients" Grid.Row="5" Grid.Column="1" Text="{Binding Recipeingredients}"/>
             </Grid>
