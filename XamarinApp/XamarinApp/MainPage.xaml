@@ -20,7 +20,7 @@
 
                     <Button x:Name="b3" Text="Restaurante" BackgroundColor="LightSeaGreen" Clicked="Handle_Clicked3"></Button>
 
-                    <Button x:Name="b4" Text="Menu Item 4" BackgroundColor="LightSkyBlue" Clicked="Handle_Clicked4"></Button>
+                    <Button x:Name="b4" Text="Harta restaurante" BackgroundColor="LightSkyBlue" Clicked="Handle_Clicked4"></Button>
 
                     <Button x:Name="b5" Text="Menu Item 5" BackgroundColor="LightPink" Clicked="Handle_Clicked5"></Button>
 

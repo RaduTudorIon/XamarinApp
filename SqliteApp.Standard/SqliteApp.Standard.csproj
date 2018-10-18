@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.Net.Http" Version="2.2.29" />
     <PackageReference Include="Newtonsoft.Json" Version="11.0.2" />
     <PackageReference Include="System.Data.SQLite" Version="1.0.109.2" />
+    <PackageReference Include="Xamarin.Forms.Maps" Version="3.3.0.912540" />
   </ItemGroup>
 
   <ItemGroup>
