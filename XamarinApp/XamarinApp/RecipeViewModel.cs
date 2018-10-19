@@ -8,7 +8,7 @@ using System.Runtime.CompilerServices;
 
 namespace XamarinApp
 {
-    class RecipeViewModel : INotifyPropertyChanged
+    public class RecipeViewModel : INotifyPropertyChanged
     {
         private readonly IRecipeRepository _recipeRepository;
         private ICollection<Recipe> _recipes;

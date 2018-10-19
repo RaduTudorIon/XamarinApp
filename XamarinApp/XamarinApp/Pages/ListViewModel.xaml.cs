@@ -9,11 +9,11 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using XamarinApp.Model;
 
-namespace XamarinApp
+namespace XamarinApp.Pages
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Page1 : ContentPage
-    {
+	public partial class ListViewModel : ContentPage
+	{
         public ObservableCollection<Recipe> RecipeList { get; set; }
 
         public Recipe _selectedRecipe { get; set; }
@@ -33,7 +33,7 @@ namespace XamarinApp
         {
 
         }
-        public Page1()
+        public ListViewModel()
         {
             RecipeList = new ObservableCollection<Recipe>
             {
@@ -41,6 +41,6 @@ namespace XamarinApp
                 new Recipe(){ RecipeTitle="Reteta bunicii2", RecipeCookingTime=22, RecipeText="asdsadadsada"},
                 new Recipe(){ RecipeTitle="Reteta bunicii3", RecipeCookingTime=22, RecipeText="asdsadadsada"},
             };
-        }
-    }
+		}
+	}
 }

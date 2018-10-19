@@ -4,11 +4,25 @@
              x:Class="XamarinApp.Page1"
              Title="Pagina1"
              x:Name="Pagina1">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <ListView   ItemsSource="{Binding RecipeList}"
+                CachingStrategy="RecycleElement"
+                HasUnevenRows="True"
+                SelectedItem="{Binding selectedRecipe}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Padding="5">
+                        <Label Text="{Binding RecipeTitle}"
+                               FontSize="Medium"
+                               TextColor="Orange"/>
+
+                        <Label Text="{Binding RecipeCookingTime}"
+                               FontSize="Small"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+        
+    </ListView>
 </ContentPage>

@@ -18,7 +18,7 @@ namespace XamarinApp.Droid
     {
         protected async override void OnCreate(Bundle savedInstanceState)
         {
-            //await TryToGetPermissions();
+            
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -30,6 +30,7 @@ namespace XamarinApp.Droid
 
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LoadApplication(new App(recipeRepository));
+            await TryToGetPermissions();
         }
 
         #region RuntimePermissions

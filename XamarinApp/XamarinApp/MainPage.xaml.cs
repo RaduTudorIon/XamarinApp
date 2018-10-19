@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using XamarinApp.Pages;
 
 namespace XamarinApp
 {
@@ -40,7 +41,11 @@ namespace XamarinApp
 
         void Handle_Clicked4(object sender, System.EventArgs e)
         {
-            Detail = new NavigationPage(new Page4());
+            Detail = new TabbedPage{
+               Children ={
+                    new Page4(), new TurkishMapRestaurants(), new FrenchMapRestaurants(), new RomanianMapRestaurants()
+                    }
+            };
             IsPresented = false;
         }
 

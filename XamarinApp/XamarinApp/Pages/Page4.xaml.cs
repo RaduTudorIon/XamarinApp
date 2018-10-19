@@ -15,7 +15,7 @@ namespace XamarinApp
 	{
 		public Page4 ()
 		{
-			//InitializeComponent ();
+			InitializeComponent ();
             try
             {
                 var map = new Map(MapSpan.FromCenterAndRadius(
