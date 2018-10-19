@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -11,13 +13,14 @@ using XamarinApp.Model;
 
 namespace XamarinApp.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListViewModel : ContentPage
-	{
-        public ObservableCollection<Recipe> RecipeList { get; set; }
+    //[XamlCompilation(XamlCompilationOptions.Compile)]
+    //public partial class ListViewModel : ContentPage
+    public partial class ListViewModel
+    {
+        public ObservableCollection<Recipe1> RecipeList { get; set; }
 
-        public Recipe _selectedRecipe { get; set; }
-        public Recipe selectedRecipe
+        public Recipe1 _selectedRecipe { get; set; }
+        public Recipe1 SelectedRecipe
         {
             get { return _selectedRecipe; }
             set
@@ -31,16 +34,25 @@ namespace XamarinApp.Pages
         }
         private void HandleSelectedItem()
         {
-
+            Page page = new Page();
+             page.DisplayAlert("Selected recipe" , "Title" + SelectedRecipe.RecipeTitle + "Cooking time" + SelectedRecipe.RecipeCookingTime
+                + "Recipe text" + SelectedRecipe.RecipeText, "Back to recipes");
         }
         public ListViewModel()
         {
-            RecipeList = new ObservableCollection<Recipe>
+            RecipeList = new ObservableCollection<Recipe1>
             {
-                new Recipe(){ RecipeTitle="Reteta bunicii", RecipeCookingTime=22, RecipeText="asdsadadsada"},
-                new Recipe(){ RecipeTitle="Reteta bunicii2", RecipeCookingTime=22, RecipeText="asdsadadsada"},
-                new Recipe(){ RecipeTitle="Reteta bunicii3", RecipeCookingTime=22, RecipeText="asdsadadsada"},
+                new Recipe1(){ RecipeTitle="Reteta bunicii", RecipeCookingTime="22", RecipeText="asdsadadsada"},
+                new Recipe1(){ RecipeTitle="Reteta bunicii2", RecipeCookingTime="22", RecipeText="asdsadadsada"},
+                new Recipe1(){ RecipeTitle="Reteta bunicii3", RecipeCookingTime="22", RecipeText="asdsadadsada"},
             };
-		}
+        }
+
+        public class Recipe1
+        {
+            public string RecipeTitle { get; set; }
+            public string RecipeCookingTime { get; set; }
+            public string RecipeText { get; set; }
+        }
 	}
 }

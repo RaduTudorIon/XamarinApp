@@ -8,7 +8,9 @@
     <ListView   ItemsSource="{Binding RecipeList}"
                 CachingStrategy="RecycleElement"
                 HasUnevenRows="True"
-                SelectedItem="{Binding selectedRecipe}">
+                SelectedItem="{Binding SelectedRecipe, Mode=TwoWay}"
+                x:Name="listViewRecommendedRecipes">
+
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
@@ -23,6 +25,6 @@
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
-        
+
     </ListView>
 </ContentPage>
