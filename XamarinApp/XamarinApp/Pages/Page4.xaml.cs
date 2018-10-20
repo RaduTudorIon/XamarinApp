@@ -24,6 +24,7 @@ namespace XamarinApp
                 {
                     IsShowingUser = true,
                     VerticalOptions = LayoutOptions.FillAndExpand
+
                 };
 
 

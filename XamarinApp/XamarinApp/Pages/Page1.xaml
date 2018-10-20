@@ -6,9 +6,8 @@
              x:Name="Pagina1">
 
     <ListView   ItemsSource="{Binding RecipeList}"
-                CachingStrategy="RecycleElement"
                 HasUnevenRows="True"
-                SelectedItem="{Binding SelectedRecipe, Mode=TwoWay}"
+                SelectedItem="{Binding _selectedRecipe, Mode=TwoWay}"
                 x:Name="listViewRecommendedRecipes">
 
         <ListView.ItemTemplate>

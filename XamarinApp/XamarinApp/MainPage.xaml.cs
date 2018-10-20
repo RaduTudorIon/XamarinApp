@@ -41,11 +41,38 @@ namespace XamarinApp
 
         void Handle_Clicked4(object sender, System.EventArgs e)
         {
-            Detail = new TabbedPage{
-               Children ={
-                    new Page4(), new TurkishMapRestaurants(), new FrenchMapRestaurants(), new RomanianMapRestaurants()
+            BackgroundColor = Color.Pink;
+
+            Detail = new TabbedPage {
+                Children ={
+                    new NavigationPage(new Page4()){
+                                    BarBackgroundColor = Color.OrangeRed,
+                                    BarTextColor = Color.White,
+                                    Title = "IT",
+                                    //BackgroundColor= Color.Yellow
+                    },
+                     new NavigationPage(new TurkishMapRestaurants()){
+                                    BarBackgroundColor = Color.OrangeRed,
+                                    //BackgroundColor = Color.Green,
+                                    BarTextColor = Color.White,        
+                                    Title = "TUR"
+                     },
+                      new NavigationPage(new FrenchMapRestaurants()){
+                                    BarBackgroundColor = Color.OrangeRed,
+                                    //BackgroundColor = Color.Green,
+                                    BarTextColor = Color.White,
+                                    Title = "FR"
+                     },
+                       new NavigationPage(new RomanianMapRestaurants()){
+                                    BarBackgroundColor = Color.OrangeRed,
+                                    //BackgroundColor = Color.Green,
+                                    BarTextColor = Color.White,
+                                    Title = "RO",
+                     },
                     }
             };
+            
+            //Detail.Title = "ASDAS";
             IsPresented = false;
         }
 

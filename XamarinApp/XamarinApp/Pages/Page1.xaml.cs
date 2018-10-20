@@ -48,6 +48,8 @@ namespace XamarinApp
                 new Recipe1(){ RecipeTitle="Reteta bunicii3", RecipeCookingTime="22", RecipeText="asdsadadsada"},
             };
             listViewRecommendedRecipes.ItemsSource = RecipeList;
+            BindingContext = listViewRecommendedRecipes;
+            //SelectedRecipe = RecipeList[2];
             //listViewRecommendedRecipes.BindingContext = SelectedRecipe;
             //listViewRecommendedRecipes.BindingContextChanged += HandleSelectedItem();
         }
