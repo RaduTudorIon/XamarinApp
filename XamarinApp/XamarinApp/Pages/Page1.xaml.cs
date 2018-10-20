@@ -43,9 +43,9 @@ namespace XamarinApp
             InitializeComponent();
             RecipeList = new ObservableCollection<Recipe1>
             {
-                new Recipe1(){ RecipeTitle="Reteta bunicii", RecipeCookingTime="22", RecipeText="asdsadadsada"},
-                new Recipe1(){ RecipeTitle="Reteta bunicii2", RecipeCookingTime="22", RecipeText="asdsadadsada"},
-                new Recipe1(){ RecipeTitle="Reteta bunicii3", RecipeCookingTime="22", RecipeText="asdsadadsada"},
+                new Recipe1(){ RecipeTitle="Lasagna", RecipeCookingTime="4h 20m", RecipeText="First infuse the milk to make the béchamel sauce. Put the 1 ½ litres milk, 1 thickly sliced onion, 3 bay leaves and 3 cloves into a large saucepan and bring very gently just up to the boil. Turn off the heat and set aside for 1 hr to infuse."},
+                new Recipe1(){ RecipeTitle="Homemade Spaghetti Sauce", RecipeCookingTime="40m", RecipeText="First brown the beef and onion. Chop the ground beef finely as you go. After it’s browned I often like to add it to my food processor to pulse it once or twice so that it’s finely crumbled. It makes the sauce extra smooth (although some people like their spaghettie sauce with larger peices of meat in it,)"},
+                new Recipe1(){ RecipeTitle="Penne with Chicken and Pesto ", RecipeCookingTime="30m", RecipeText="Bring a large pot of lightly salted water to a boil. Add pasta and cook for 8 to 10 minutes or until al dente; drain."},
             };
             listViewRecommendedRecipes.ItemsSource = RecipeList;
             BindingContext = listViewRecommendedRecipes;

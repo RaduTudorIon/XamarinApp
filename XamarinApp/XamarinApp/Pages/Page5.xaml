@@ -5,9 +5,10 @@
              Title="Pagina5">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <!--<Label Text="Recipes for the season"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+                HorizontalOptions="CenterAndExpand" />-->
+            <WebView x:Name="webView" WidthRequest="9000" HeightRequest="9000"></WebView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
