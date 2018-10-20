@@ -2,12 +2,23 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinApp.Page6"
-             Title="Despre">
+             Title="About">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+        <ScrollView>
+            <StackLayout>
+            <Label Text="The &quot;Food for all&quot; application is aiming to bring the most famous recipes in the world in your kitchen! Feel free to add your favorite recipes in the app as well!"
                 VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="22"
+                   Margin="20"
+                   />
+                <Label Text="Team members: Ana-Maria Pintilie, Cristiana Lucaci, Radu Tudor Ion. Teacher: Paul Pocatilu || The Bucharest University of Economic Studies 2018"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" 
+                   FontSize="22"
+                   Margin="20"
+                   />
+          </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -34,9 +34,11 @@ namespace XamarinApp
 
         private void HandleSelectedItem()
         {
-            Page page = new Page();
-            page.DisplayAlert("Selected recipe", "Title" + SelectedRecipe.RecipeTitle + "Cooking time" + SelectedRecipe.RecipeCookingTime
-               + "Recipe text" + SelectedRecipe.RecipeText, "Back to recipes");
+            //Page page = new Page();
+            //page.DisplayAlert("Selected recipe", "Title" + SelectedRecipe.RecipeTitle + "Cooking time" + SelectedRecipe.RecipeCookingTime
+            //  + "Recipe text" + SelectedRecipe.RecipeText, "Back to recipes");
+            Device.BeginInvokeOnMainThread(async () => { await DisplayAlert("Selected recipe\n", "Title            ||" + SelectedRecipe.RecipeTitle + "Cooking time        ||"  + SelectedRecipe.RecipeCookingTime
+              + "Recipe text                          " + SelectedRecipe.RecipeText, "Back to recipes"); });
         }
         public Page1()
         {
@@ -59,6 +61,12 @@ namespace XamarinApp
             public string RecipeTitle { get; set; }
             public string RecipeCookingTime { get; set; }
             public string RecipeText { get; set; }
+        }
+
+        private void listViewRecommendedRecipes_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            SelectedRecipe = (Recipe1)e.Item;
+            //HandleSelectedItem();
         }
     }
 }

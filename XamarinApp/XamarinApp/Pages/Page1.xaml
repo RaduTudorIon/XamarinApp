@@ -1,25 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinApp.Pages"
              x:Class="XamarinApp.Page1"
-             Title="Editor's choice"
+             Title="Food for all"
              x:Name="Pagina1">
 
     <ListView   ItemsSource="{Binding RecipeList}"
                 HasUnevenRows="True"
                 SelectedItem="{Binding _selectedRecipe, Mode=TwoWay}"
-                x:Name="listViewRecommendedRecipes">
-
+                x:Name="listViewRecommendedRecipes"
+                ItemTapped="listViewRecommendedRecipes_ItemTapped">
+                
         <ListView.ItemTemplate>
             <DataTemplate>
                 <ViewCell>
                     <StackLayout Padding="5">
                         <Label Text="{Binding RecipeTitle}"
                                FontSize="Medium"
-                               TextColor="Orange"/>
+                               TextColor="Orange"></Label>
 
                         <Label Text="{Binding RecipeCookingTime}"
-                               FontSize="Small"/>
+                               FontSize="Small"></Label>
                     </StackLayout>
                 </ViewCell>
             </DataTemplate>
