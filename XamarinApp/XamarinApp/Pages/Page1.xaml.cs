@@ -37,8 +37,8 @@ namespace XamarinApp
             //Page page = new Page();
             //page.DisplayAlert("Selected recipe", "Title" + SelectedRecipe.RecipeTitle + "Cooking time" + SelectedRecipe.RecipeCookingTime
             //  + "Recipe text" + SelectedRecipe.RecipeText, "Back to recipes");
-            Device.BeginInvokeOnMainThread(async () => { await DisplayAlert("Selected recipe\n", "Title            ||" + SelectedRecipe.RecipeTitle + "Cooking time        ||"  + SelectedRecipe.RecipeCookingTime
-              + "Recipe text                          " + SelectedRecipe.RecipeText, "Back to recipes"); });
+            Device.BeginInvokeOnMainThread(async () => { await DisplayAlert("Selected recipe\n", "\n Title : " + SelectedRecipe.RecipeTitle + "\n Cooking time : "  + SelectedRecipe.RecipeCookingTime
+              + " \n Recipe text : " + SelectedRecipe.RecipeText, " Back to recipes "); });
         }
         public Page1()
         {
