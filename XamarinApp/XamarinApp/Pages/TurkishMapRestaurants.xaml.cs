@@ -31,7 +31,7 @@ namespace XamarinApp.Pages
                 var position1 = new Position(44.416904, 26.103956);
                 var position2 = new Position(44.4202968, 26.1140701);
                 var position3 = new Position(44.418603, 26.058861);
-                var position4 = new Position(44.4326338, 26.0960913);
+                var position4 = new Position(44.408002, 26.0971826);
                 var position5 = new Position(44.4425088, 26.1191793);
                 var position6 = new Position(44.4702258, 26.1445193);
 
